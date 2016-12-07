@@ -44,7 +44,13 @@ int main()
 	const Teacher& ctr = prof;
 	//Professor& pr = static_cast<Professor>(teacher);
 	const Professor* cp = reinterpret_cast<const Professor*>(&person);
-	
+	Folder* fp = reinterpret_cast<Folder*>(&teacher);
+	//File& fref = static_cast<File&>(const_cast<Person&>(person));
+	//const File& cfref = 
+	INode& inodeRef = file;	
+	const INode& constInodeRef = file;
+	Folder& folderRef = reinterpret_cast<Folder&>(file);
+
 	return 0;
 }
 
